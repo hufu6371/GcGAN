@@ -17,7 +17,7 @@ The codes are only for research purposes. You may also need to follow the instru
 git clone https://github.com/hufu6371/GcGAN.git
 cd $GcGAN_ROOT
 ```
-2. Download dataset (Cityscapes):
+2. Download the dataset (Cityscapes):
 ```
 sh ./scripts/download_cyclegan_dataset.sh cityscapes
 ```
@@ -34,27 +34,21 @@ cd evaluation/parsing2city
 python evaluate.py
 ```
 
-### Pretrained models
-1. [KITTI](https://drive.google.com/open?id=180QRn5su1Yf5d-WNqE0jELPNuOpQMjNR)
-2. [NYUV2](https://drive.google.com/file/d/1PkxkzWwZthjnJGtaPlTS5qTrj-Tka7eX/view?usp=sharing)
+### Tips
+1. For city2parsing, we do not apply scale augmentation. (--loadSize 128, --fineSize 128)
+2. For parsing2city, we set "identity" as 0.3. (--identity 0.3)
+3. For horse2zebra, winter2summer, summer2winter, we do not share parameters for G_{XY} and G_{\tilde{X}\tilde{Y}}. (--model gc_gan_cross)
+4. For svhn2mnist, the training scripts are located in the "models/mnist_to_svhn" directory. Please follow the instruction stated in DistanceGAN for training.
+5. The evaluation scripts are located in the "$GcGAN_ROOT/evalutation" directory.
 
-### Scores on the evaluation servers
-1. [KITTI](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)
-2. [ScanNet](http://dovahkiin.stanford.edu/adai/)
-
-### Results on ScanNet
-The evaluation scripts and the groundtruth depth maps for KITTI and NYU Depth v2 are contained in the zip files. You may also need to download the predictions from [Eigen et al.](https://cs.nyu.edu/~deigen/depth/) for the center cropping used in our evaluation scripts.
-1. [ScanNet](https://drive.google.com/file/d/12EB_UrmNQZj8VvEUVVxwl1VBQFPB9hdv/view?usp=sharing)
-2. [KITTI](https://drive.google.com/open?id=18z_FpbHWmU-tX19n2FWQMwpzCmuuOsMb)
-3. [NYU Depth v2](https://drive.google.com/open?id=1uRqOkCbJLwHWyx4oz19N6MQgrOSZQo6H)
 
 ### Citation
 ```
-@inproceedings{FuCVPR18-DORN,
-  TITLE = {{Deep Ordinal Regression Network for Monocular Depth Estimation}},
-  AUTHOR = {Fu, Huan and Gong, Mingming and Wang, Chaohui and Batmanghelich, Kayhan and Tao, Dacheng},
+@inproceedings{FuCVPR19-GcGAN,
+  TITLE = {{Geometry-Consistent Generative Adversarial Networks for One-Sided Unsupervised Domain Mapping}},
+  AUTHOR = {Fu, Huan and Gong, Mingming and Wang, Chaohui and Batmanghelich, Kayhan and Zhang, Kun and Tao, Dacheng},
   BOOKTITLE = {{IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}},
-  YEAR = {2018}
+  YEAR = {2019}
 }
 ```
 ### Contact
