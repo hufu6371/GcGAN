@@ -7,31 +7,31 @@ Huan Fu and Mingming Gong contribute equally to the project and the paper.
 
 
 ### Introduction
-The shared code is a Pytorch implemention of our CVPR19 paper (GcGAN), and is modified from [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and [DistanceGAN](https://github.com/sagiebenaim/DistanceGAN). The code has been tested successfully on CentOS release 6.9, Cuda 9.1, Tesla V100, Anaconda python3, Pytorch 0.4.1. 
+The codes have been modified from [CycleGAN-Pix2Pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and [DistanceGAN](https://github.com/sagiebenaim/DistanceGAN), and have been tested successfully on CentOS release 6.9, Cuda 9.1, Tesla V100, Anaconda python3, Pytorch 0.4.1. 
 
-This code is only for research purposes. You may also need to follow the instructions of [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and [DistanceGAN](https://github.com/sagiebenaim/DistanceGAN).
+The codes are only for research purposes. You may also need to follow the instructions of [CycleGAN-Pix2Pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and [DistanceGAN](https://github.com/sagiebenaim/DistanceGAN).
 
 ### Usage
 1. Clone the respository:
 ```
-git clone https://github.com/hufu6371/DORN.git
+git clone https://github.com/hufu6371/GcGAN.git
+cd $GcGAN_ROOT
 ```
-2. Build and link to pycaffe:
+2. Download dataset (Cityscapes):
 ```
-cd $DORN_ROOT
-edit Makefile.config
-build pycaffe
-export PYTHONPATH=$DORN_ROOT/python:$DORN_ROOT/pylayer:$PYTHONPATH
+sh ./scripts/download_cyclegan_dataset.sh cityscapes
 ```
-3. Download our pretrained models:
+3. Traning and Test (parsing2city):
 ```
-mv cvpr_kitti.caffemodel $DORN_ROOT/models/KITTI/
-mv cvpr_nyuv2.caffemodel $DORN_ROOT/models/NYUV2/
+sh ./train_gcgan.sh
+sh ./test_gcgan.sh
 ```
-4. Demo (KITTI and NYUV2):  
+4. Evaluation (parsing2city):  
 ```
-python demo_kitti.py --filename=./data/KITTI/demo_01.png --outputroot=./result/KITTI
-python demo_nyuv2.py --filename=./data/NYUV2/demo_01.png --outputroot=./result/NYUV2
+Install pycaffe
+Download the pre-trained FCN caffe model following the instructions stated in CycleGAN and Pix2Pix
+cd evaluation/parsing2city
+python evaluate.py
 ```
 
 ### Pretrained models
