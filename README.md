@@ -36,10 +36,11 @@ python evaluate.py
 
 ### Tips
 1. For city2parsing, we do not apply scale augmentation. (--loadSize 128, --fineSize 128)
-2. For parsing2city, we set "identity" as 0.3. (--identity 0.3)
+2. For parsing2city, we set the hyperparameter "identity" as 0.3. For others, the hyperparameter "identity" is 0.5.
 3. For horse2zebra, winter2summer, summer2winter, we do not share parameters for G_{XY} and G_{\tilde{X}\tilde{Y}}. (--model gc_gan_cross)
 4. For svhn2mnist, the training scripts are located in the "models/mnist_to_svhn" directory. Please follow the instructions stated in DistanceGAN for training.
 5. The evaluation scripts are located in the "$GcGAN_ROOT/evalutation" directory.
+6. All the models are trained on 4 GPU cards.
 
 
 ### Citation
