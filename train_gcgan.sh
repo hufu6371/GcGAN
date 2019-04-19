@@ -1,0 +1,1 @@
+python train.py --dataroot ./datasets/cityscapes --name parsing2city_rot --model gc_gan_share --pool_size 50 --no_dropout --loadSize 144 --fineSize 128 --which_model_netG resnet_6blocks --batchSize 12 --gpu_ids 0,1,2,3 --identity 0.3 --which_direction BtoA --geometry rot
