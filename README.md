@@ -5,7 +5,7 @@
 #### [H. Fu, M. Gong, C. Wang, K. Batmanghelich, K. Zhang and D. Tao: Geometry-Consistent Generative Adversarial Networks for One-Sided Unsupervised Domain Mapping.](https://arxiv.org/abs/1809.05852) Accepeted to CVPR 2019.
 Huan Fu and Mingming Gong contribute equally to the project and the paper.
 
-Some Markdown text with <span style="color:green">some *blue* text</span>
+[<span style="color:green">some *blue* text</span>](https://arxiv.org/abs/1809.05852)
 
 ### Introduction
 The codes have been modified from [CycleGAN-Pix2Pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) and [DistanceGAN](https://github.com/sagiebenaim/DistanceGAN), and have been tested successfully on CentOS release 6.9, Cuda 9.1, Tesla V100, Anaconda python3, Pytorch 0.4.1. 
