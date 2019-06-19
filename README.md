@@ -2,7 +2,7 @@
 
 ### Paper
 
-#### [H. Fu, M. Gong, C. Wang, K. Batmanghelich, K. Zhang and D. Tao: Geometry-Consistent Generative Adversarial Networks for One-Sided Unsupervised Domain Mapping.](https://arxiv.org/abs/1809.05852) Accepeted to CVPR 2019.
+#### [H. Fu, M. Gong, C. Wang, K. Batmanghelich, K. Zhang and D. Tao: Geometry-Consistent Generative Adversarial Networks for One-Sided Unsupervised Domain Mapping.](https://arxiv.org/abs/1809.05852) CVPR 2019 (oral)
 [Huan Fu](https://hufu6371.github.io/huanfu/)  and [Mingming Gong](https://mingming-gong.github.io/) contribute equally to the project and the paper.
 
 Pretrained Models will avaliable soon.
