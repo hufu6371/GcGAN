@@ -37,6 +37,12 @@ cd evaluation/parsing2city
 python evaluate.py
 ```
 
+### Pretrained Models
+[all models](https://drive.google.com/file/d/1W-3DiPQueG8BFKD-jCpESTzCfr6vyyVF/view?usp=sharing
+https://drive.google.com/file/d/1k5kDCFLuIgBz9WpC1DZKUbJebd8MREFq/view?usp=sharing)
+[synthetic2real dataset] (https://drive.google.com/file/d/1W-3DiPQueG8BFKD-jCpESTzCfr6vyyVF/view?usp=sharing
+https://drive.google.com/file/d/1k5kDCFLuIgBz9WpC1DZKUbJebd8MREFq/view?usp=sharing)
+
 ### Tips
 1. For city2parsing, we do not apply scale augmentation. (--loadSize 128, --fineSize 128)
 2. For parsing2city, we set the hyperparameter "identity" as 0.3. For others, the hyperparameter "identity" is 0.5.
